@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.header,
+.product-section,
+.feature-section,
+.information-pannel,
+.center-pannel,
+.right-pannel,
+.card{
+    border:2px solid red;
+}
+
+.main{
+    min-height: 100vh;
+    display:grid;
+    grid-template-rows:  90px 700px 220px 100px;
+    grid-template-areas:
+      "header"
+      "product"
+      "cards"
+      "footer";
+}
+
+.navigation-area{
+    display:flex;
+    gap:60px;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  background: lightblue;
+}
+
+.product-section {
+  grid-area: product;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "left center right";
+  background: lightgreen;
+}
+
+.information-pannel {
+  grid-area: left;
+}
+.center-pannel {
+  grid-area: center;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.image-section {
+  background: lightgray;
+}
+.feature-strip {
+  background: #ddd;
+}
+
+
+.right-pannel {
+  grid-area: right;
+}
+
+.feature-section {
+  grid-area: cards;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background: lightyellow;
+}
+.card {
+  background: #f2f2f2;
+  min-height:180px;
+}
+
+.footer-features{
+    grid-area: footer;
+    border:2px solid red;
+    background: lightpink;
+}
