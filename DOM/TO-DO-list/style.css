@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    height: 60%;
+    width: 60%;
+    background-color: rgb(220, 195, 195);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center;
+
+}
+
+input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    width: 200px;
+    border: 10px solid #d99b9b;
+}
+#Add{
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #36a7c3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.todo-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.li{
+   background-color: #d99b9b;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   border-radius: 5px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   border: 1px solid #ccc;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h3{
+    font-size: 18px;
+    color: #333;
+    font-weight: 300px;
+}
+
+.btn{
+    padding: 5px 25px;
+    border: none;
+    border-radius: 10px;
+    color: rgb(61, 57, 57);
+    cursor: pointer;
+}
+
+.del{
+    background-color: #bb483b;
+}
+
+.edit{
+    background-color: #e4e020;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.todo h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.check {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.edit {
+    background: #f39c12;
+}
+
+.edit:hover {
+    background: #d68910;
+}
+
+.del {
+    background: #e74c3c;
+}
+
+.del:hover {
+    background: #c0392b;
+}
