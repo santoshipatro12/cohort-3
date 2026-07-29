@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+form{   
+    height: 30%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 20px;
+    background-color: rgb(220, 195, 195);
+}
+
+input{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    outline: none;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    outline: none;
+    background-color: #36a7c3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #195061;
+}
+
+
+.users{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.user_card{
+    width:300px;
+    /* height:250px; */
+    height:fit-content;
+    border:2px solid white;
+    border-radius:10px;
+    padding:10px;
+    background-color: rgb(156, 114, 114);
+}
+.img_box{
+    width:100%;
+    height:70%;
+    margin-bottom:10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+h3{
+    margin-bottom:10px;
+}
+
+.actions{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+}
+
+.edit{
+    background-color: darkorange;
+}
+
+.delete{
+    background-color: darkred;
+}
+
