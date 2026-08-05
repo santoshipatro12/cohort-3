@@ -4,7 +4,9 @@ const closeBtn = document.querySelector("#close");
 const form = document.querySelector("form");
 const productsDiv = document.querySelector(".products");
 
-const productsArr= []
+const productsArr = JSON.parse(localStorage.getItem("products")) || [];
+
+
 let updateIndex = null;
 
 let ui =() =>{
@@ -27,6 +29,8 @@ let ui =() =>{
         </div>`);
    }); 
 } 
+
+ui();
 
 createBtn.addEventListener("click", () => {
     formDiv.style.display = "flex";
@@ -60,8 +64,10 @@ form.addEventListener("submit", (e) => {
     if(updateIndex !== null){
         productsArr[updateIndex] = obj;
         updateIndex = null;
+        localStorage.setItem("products", JSON.stringify(productsArr));  // Store the updated products array in localStorage
     }else{
         productsArr.push(obj);
+        localStorage.setItem("products", JSON.stringify(productsArr));   // Store the new products array in localStorage
     }
   ui();
   
@@ -82,5 +88,47 @@ const updateProduct = (name) => {
 
 const deleteProduct = (index) => {
     productsArr.splice(index, 1);
+    localStorage.setItem("products", JSON.stringify(productsArr));  // Update the products array in localStorage after deletion
     ui();
 }
+
+
+
+
+// localStorage.setItem('name', 'John Doe');
+
+// let lsd = localStorage.getItem('name'); // "John Doe"
+// console.log(lsd)
+
+
+
+// let data = [
+//     {
+//         name:"santoshi",
+//         age: 20,
+//         address: "taloja",
+//         "pin-code": 410208,
+//     },
+//     {
+//         name:"santosh",
+//         age: 18,
+//         address: "kharghar",
+//         "pin-code": 410274,
+//     },
+//     {
+//         name:"Suprabha",
+//         age: 40,
+//         address: "upper kharghar",
+//         "pin-code": 410708,
+//     },
+// ]
+
+// let newData = ["polo"]
+// localStorage.setItem("data", JSON.stringify(data));
+// localStorage.setItem("newData", JSON.stringify(newData));
+
+// const lsd = localStorage.getItem("data");
+// let value = JSON.parse(lsd);
+// console.log(value)
+
+// // localStorage.removeItem("newData");
